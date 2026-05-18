@@ -58,12 +58,12 @@ public class Pizza {
 
     
     public void actualizarCoccion() {
-    long tiempoCoccion = temporizador.getElapsed();
-    if (tiempoCoccion < 3000) {
+    long tiempoCoccion = temporizador.getElapsed() / 1000;
+    if (tiempoCoccion < 20) {
         estado = EstadoCoccion.CRUDO;
-    } else if (tiempoCoccion < 6000) {
+    } else if (tiempoCoccion < 45) {
         estado = EstadoCoccion.MEDIO;
-    } else if (tiempoCoccion <= 10000) {
+    } else if (tiempoCoccion <= 80) {
         estado = EstadoCoccion.COCIDO;
     } else {
         estado = EstadoCoccion.QUEMADO;

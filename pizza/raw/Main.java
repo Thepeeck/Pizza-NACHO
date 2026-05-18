@@ -67,7 +67,7 @@ public class Main {
                         pizzaActual = cocina.ProcesosSiguientes();
                         ordenActual = new Orden(99, "Cliente", "Preparando", 20);
                         // Tiempo ajustado a 40 segundos (40000L) para que sea mas lento
-                        pizzaActual.temporizador = new Temporizador(0L, 40000L);
+                        pizzaActual.temporizador = new Temporizador(0L, 80000L);
                         pizzaActual.temporizador.iniciar();
                         System.out.println("Has tomado la orden: " + pizzaActual.getNombre());
                     } else {
